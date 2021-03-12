@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MetrosCuadrados {
     private double total;
-    private double valor;
+    private double value;
     private String cuartoGrande;
     private List<String> metrosCuadradosXCuarto = new ArrayList<>();
 
@@ -20,12 +20,12 @@ public class MetrosCuadrados {
         this.total = total;
     }
 
-    public double getValor() {
-        return valor;
+    public double getValue() {
+        return value;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public void setValue(double value) {
+        this.value = value;
     }
 
     public String getCuartoGrande() {
@@ -59,7 +59,7 @@ public class MetrosCuadrados {
             }
             metrosCuadradosXCuarto.add(String.format("%s $.2f m2",cuartoGrande,metrosCu));
         }
-        valor = total * 800;
+        value = total * 800;
     }
 
 }
