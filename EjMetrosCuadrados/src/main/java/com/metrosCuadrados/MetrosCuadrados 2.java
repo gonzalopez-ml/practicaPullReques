@@ -9,7 +9,8 @@ public class MetrosCuadrados {
     private String cuartoGrande;
     private List<String> metrosCuadradosXCuarto = new ArrayList<>();
 
-
+    public MetrosCuadrados(CasaDTO casaDTO) {
+    }
 
     public double getTotal() {
         return total;
@@ -43,20 +44,20 @@ public class MetrosCuadrados {
         this.metrosCuadradosXCuarto = metrosCuadradosXCuarto;
     }
 
+    public void MetrosCuadrados(CasaDTO casaDto){
 
-    public MetrosCuadrados(CasaDTO casaDto){
-
-        double largo = Double.MIN_VALUE;
+        double largo = 0;
         total = 0.0;
 
         for (HabitacionDTO h : casaDto.getHabitaciones()){
             double metrosCu = h.getCalculoMetrosCuadrados();
-            total += metrosCu;
+            total = total + metrosCu;
+
             if(metrosCu > largo){
                 largo = metrosCu;
                 this.cuartoGrande = h.getNombre();
             }
-            metrosCuadradosXCuarto.add(String.format("%s %.2f m2",h.getNombre(),metrosCu));
+            metrosCuadradosXCuarto.add(String.format("%s $.2f m2",cuartoGrande,metrosCu));
         }
         valor = total * 800;
     }

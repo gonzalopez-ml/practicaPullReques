@@ -21,12 +21,12 @@ public class HabitacionDTO {
         this.ancho = ancho;
     }
 
-    public double getAlto() {
+    public double getLargo() {
         return alto;
     }
 
-    public void setAlto(double alto) {
-        this.alto = alto;
+    public void setLargo(double largo) {
+        this.alto = largo;
     }
 
     public double getCalculoMetrosCuadrados(){
